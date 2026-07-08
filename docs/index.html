@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>DevAcademy — Software Development Education Platform</title>
+<meta name="description" content="A software development education & training platform starter: course browsing, progress tracking, and authentication, built on Next.js, Express, and PostgreSQL." />
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --fg: #0f172a;
+    --muted: #475569;
+    --border: #e2e8f0;
+    --card: #f8fafc;
+    --accent: #2563eb;
+    --accent-fg: #ffffff;
+    --pill-bg: #eff6ff;
+    --pill-fg: #1d4ed8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0b1120;
+      --fg: #e2e8f0;
+      --muted: #94a3b8;
+      --border: #1e293b;
+      --card: #111827;
+      --accent: #3b82f6;
+      --accent-fg: #0b1120;
+      --pill-bg: #172554;
+      --pill-fg: #93c5fd;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0b1120;
+    --fg: #e2e8f0;
+    --muted: #94a3b8;
+    --border: #1e293b;
+    --card: #111827;
+    --accent: #3b82f6;
+    --accent-fg: #0b1120;
+    --pill-bg: #172554;
+    --pill-fg: #93c5fd;
+  }
+  :root[data-theme="light"] {
+    --bg: #ffffff;
+    --fg: #0f172a;
+    --muted: #475569;
+    --border: #e2e8f0;
+    --card: #f8fafc;
+    --accent: #2563eb;
+    --accent-fg: #ffffff;
+    --pill-bg: #eff6ff;
+    --pill-fg: #1d4ed8;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem 5rem;
+  }
+  .eyebrow {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--pill-fg);
+    background: var(--pill-bg);
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    margin-bottom: 1rem;
+  }
+  h1 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    margin: 0 0 1rem;
+  }
+  p.lead {
+    color: var(--muted);
+    font-size: 1.05rem;
+    max-width: 60ch;
+  }
+  .actions {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.75rem 0 3rem;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.6rem 1.1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    border: 1px solid var(--border);
+  }
+  .btn.primary {
+    background: var(--accent);
+    color: var(--accent-fg);
+    border-color: var(--accent);
+  }
+  .btn.secondary {
+    color: var(--fg);
+  }
+  h2 {
+    font-size: 1.2rem;
+    margin: 0 0 0.75rem;
+  }
+  section { margin-bottom: 2.5rem; }
+  .stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0;
+    list-style: none;
+    margin: 0;
+  }
+  .stack li {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 0.35rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+  }
+  .card ul {
+    margin: 0.5rem 0 0;
+    padding-left: 1.2rem;
+    color: var(--muted);
+  }
+  .card li { margin-bottom: 0.35rem; }
+  footer {
+    color: var(--muted);
+    font-size: 0.85rem;
+    border-top: 1px solid var(--border);
+    padding-top: 1.5rem;
+    margin-top: 2rem;
+  }
+  footer a { color: inherit; }
+  code {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 0.1rem 0.35rem;
+    font-size: 0.85em;
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <span class="eyebrow">Starter Scaffold</span>
+    <h1>DevAcademy — Software Development Education Platform</h1>
+    <p class="lead">
+      A structured-learning platform for software developers: browse courses, track progress on a
+      personal dashboard, and sign in via GitHub OAuth or a dev-only login. Built as a real,
+      working vertical slice on top of a full monorepo scaffold — not a mockup.
+    </p>
+
+    <div class="actions">
+      <a class="btn primary" href="https://github.com/christabelletan21/8-jul-26">View on GitHub</a>
+      <a class="btn secondary" href="https://github.com/christabelletan21/8-jul-26#readme">Setup Instructions</a>
+    </div>
+
+    <section>
+      <h2>Tech stack</h2>
+      <ul class="stack">
+        <li>Next.js (App Router, TypeScript)</li>
+        <li>Express</li>
+        <li>PostgreSQL</li>
+        <li>Prisma</li>
+        <li>NextAuth.js</li>
+        <li>Tailwind CSS</li>
+        <li>npm workspaces monorepo</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>What's actually working</h2>
+      <div class="card">
+        <p style="margin:0 0 0.5rem; color:var(--muted);">
+          One full vertical slice is implemented end-to-end, plus the supporting project structure,
+          database schema, and authentication:
+        </p>
+        <ul>
+          <li>Browse courses and view a course detail page</li>
+          <li>Mark course progress and see it reflected on your dashboard</li>
+          <li>Authentication via NextAuth (GitHub OAuth or dev-only login)</li>
+        </ul>
+        <p style="margin:0.75rem 0 0; color:var(--muted); font-size:0.9rem;">
+          Live trainings/TMS, code playground, AI tutor, payments, and the community forum appear in
+          the navigation as honest <strong>"Coming soon"</strong> placeholders — they are not built yet.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Run it locally</h2>
+      <p style="color:var(--muted); margin-bottom:0.5rem;">Full instructions are in the README, in short:</p>
+      <div class="card">
+        <code>npm run db:up</code> → copy the <code>.env.example</code> files → <code>npm install</code> →
+        <code>npm run db:migrate &amp;&amp; npm run db:seed</code> → <code>npm run dev</code>
+      </div>
+    </section>
+
+    <footer>
+      This page is a static project overview served via GitHub Pages — the app itself (Next.js +
+      Express + Postgres) requires a server and database, so it runs locally or on your own hosting,
+      not from Pages. See the
+      <a href="https://github.com/christabelletan21/8-jul-26">repository</a> for source and setup.
+    </footer>
+  </div>
+</body>
+</html>
