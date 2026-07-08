@@ -9,6 +9,7 @@ const NAV_LINKS = [
   { href: "/playground", label: "Playground" },
   { href: "/community", label: "Community" },
   { href: "/pricing", label: "Pricing" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export async function Navbar() {
